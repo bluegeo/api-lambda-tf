@@ -3,9 +3,13 @@ A light terraform implementation of API-Driven lambda function invocations
 
 _Configured on [aws](https://aws.amazon.com/) with [terraform](https://www.terraform.io/)_
 
-**Note** docker is required, and the exec commands will only work on *ix operating systems
+---
+
+**Note:** docker is required, and the exec commands will only work on *ix operating systems
 
 **Do not manually configure any infrastructure managed by this repo on AWS!**
+
+---
 
 ### AWS Credentials
 Set up your AWS credentials (if you haven't already) using the AWS CLI.
@@ -29,6 +33,7 @@ AWS Secret Access Key [None]: wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
 Default region name [None]: us-west-2
 Default output format [None]: json
 ```
+---
 
 ### Library configuration
 User or project-specific variables are entered by creating a `terraform.tfvars` file in the repository root.
@@ -44,6 +49,8 @@ aws_region = "us-west-2"
 
 This file is not meant to be committed.
 
+---
+
 ### Functions configuration
 You may deploy any number of functions at once, and they are built, deployed, and run by **name**
 To build a function you must do three things:
@@ -54,6 +61,8 @@ Note: An example/testing method called `invoke-default` is already included (rem
     * A Dockerfile to build the function.
     * A `handler.py` python (3.6) script to be run in the lambda function.
     * A `parameters.json` file that maps the function parameters. Use the syntax provided in `invoke-default`.
+
+---
 
 ### Deployment
 Get everything ready using:
@@ -76,3 +85,6 @@ access the url use the command:
 ```bash
 terraform output
 ```
+
+---
+viola
