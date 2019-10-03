@@ -1,0 +1,4 @@
+{
+  "param1": "$input.path('$.param1')",
+  "param2": "$input.path('$.param2')"
+}
