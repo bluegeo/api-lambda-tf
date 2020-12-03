@@ -14,6 +14,10 @@ variable "api" {
   description = "The Root API Resource"
 }
 
+variable "user_pool_arn" {
+  description = "ARN for the Cognito user pool if using authentication for API calls"
+}
+
 variable "api_execution_arn" {
   description = "ARN of the API Gateway deployment"
 }
@@ -24,16 +28,16 @@ variable "api_root_resource_id" {
 
 variable "api_methods" {
   description = "list of API methods"
-  type = "list"
+  type = list
 }
 
 variable "allowed_headers" {
   description = "CORS variables"
-  type        = "list"
+  type        = list
 }
 variable "allowed_methods" {
   description = "CORS variables"
-  type        = "list"
+  type        = list
 }
 variable "allowed_origin" {
   description = "CORS variables"

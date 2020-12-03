@@ -22,10 +22,16 @@ variable "aws_region" {
   description = "The AWS region things are created in"
 }
 
+variable "user_pool_arn" {
+  description = "ARN for the Cognito user pool if using authentication for API calls"
+  default     = "none"
+}
+
+
 // Methods go here (each is associated with a different lambda call)
 variable "api_methods" {
   description = "Names of different lambda functions to be called by the api"
-  type = "list"
+  type        = list
   default = [
     "invoke-default"
   ]

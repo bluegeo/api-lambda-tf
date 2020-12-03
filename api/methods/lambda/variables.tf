@@ -12,7 +12,7 @@ variable "aws_region" {
 
 variable "api_methods" {
   description = "Names of the lambda functions"
-  type = "list"
+  type        = list
 }
 
 variable "api_execution_arn" {

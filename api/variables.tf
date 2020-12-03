@@ -18,12 +18,16 @@ variable "app_version" {
 
 variable "api_methods" {
   description = "Names of the API methods"
-  type = "list"
+  type        = list
+}
+
+variable "user_pool_arn" {
+  description = "ARN for the Cognito user pool if using authentication for API calls"
 }
 
 variable "allowed_headers" {
   description = "Allowed headers"
-  type        = "list"
+  type        = list
 
   default = [
     "Content-Type",
@@ -36,7 +40,7 @@ variable "allowed_headers" {
 
 variable "allowed_methods" {
   description = "Allowed methods"
-  type        = "list"
+  type        = list
 
   default = [
     "POST"
@@ -45,6 +49,6 @@ variable "allowed_methods" {
 
 variable "allowed_origin" {
   description = "Allowed origin"
-  type        = "string"
+  type        = string
   default     = "*"
 }

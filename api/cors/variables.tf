@@ -6,15 +6,15 @@ variable "resource_id_count" {
 }
 variable "resource_ids" {
   description = ""
-  type = "list"
+  type        = list
 }
 variable "allowed_headers" {
   description = ""
-  type        = "list"
+  type        = list
 }
 variable "allowed_methods" {
   description = ""
-  type        = "list"
+  type        = list
 }
 variable "allowed_origin" {
   description = ""
